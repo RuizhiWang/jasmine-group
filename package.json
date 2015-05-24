@@ -1,0 +1,42 @@
+{
+  "name": "jasmine-group",
+  "version": "1.0.0",
+  "description": "Jasmine plugin for group testing",
+  "main": "./lib/jasmine-group.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RuizhiWang/jasmine-group.git"
+  },
+  "devDependencies": {
+    "jasmine-core": "~2.1.0"
+  },
+  "peerDependencies": {
+    "jasmine-core": "*"
+  },
+  "keywords": [
+    "jasmine-plugin",
+    "jasmine-group"
+  ],
+  "author": "Ruizhi Wang, Felice Geracitano",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/RuizhiWang/jasmine-group/blob/master/LICENSE"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "felicege",
+      "email": "felice.geracitano@gmail.com",
+      "name": "Ruizhi",
+      "email": "crystalplan999@gmail.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/RuizhiWang/jasmine-group/issues"
+  },
+  "homepage": "https://github.com/RuizhiWang/jasmine-group"
+}
