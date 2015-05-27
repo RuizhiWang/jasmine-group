@@ -1,6 +1,6 @@
 {
   "name": "jasmine-group",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Jasmine plugin for group testing",
   "main": "./lib/jasmine-group.js",
   "scripts": {
