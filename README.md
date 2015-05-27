@@ -1,26 +1,41 @@
 # jasmine-group
-Jasmine Tests Grouping Plugin
+Jasmine plugin to run JavaScript unit tests by groups and priorities. Tests will be selected for execution based on groups' setting.
 
-# Synopsis  
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)  
- 
-# Code Example  
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.  
+# Motivation
+**Existing issues:**  
+1. Unlike JUnit (@Category) and PHPUnit (@group), Jasmine JavaScript unit testing does not support grouping test;  
+2. Users have to manually set <code>fdescribe</code> to focus on several related test cases;  
+3. The sequence of execution is restricted in the names of test cases. Users are hard to control the execution order.  
+**Requirements:**  
+1. Provide feature for grouping tests;  
+2. Provide feature to run specific suite of tests easier;  
+3. Provide feature to define the execution order easier.
 
-# Motivation  
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.  
+# Installation
+You can simple do it by running following command inside of your project directory:
+```
+    npm install jasmine-group --save-dev
+```
+**Please note**: This plugin is designed for running with <code>Karma</code>, the functionality may not working if only install this plugin.  
+Also if you have <code>'karma-jasmine-group'</code> in your <code>package.json</code> devDependencies list, this plugin will be installed automatically.  
+See [karma-jasmine-group](https://github.com/RuizhiWang/karma-jasmine-group) for more details.
 
-# Installation  
-Provide code examples and explanations of how to get the project.  
+# Configuration
+Please see [karma-jasmine-group](https://github.com/RuizhiWang/karma-jasmine-group) for the settings in your Karma configuration.
 
-# API Reference  
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.  
+# Usage
+Once you have configured your Karma configuration, you can simple to replace 'describe' with 'gdescribe' and add the group name as the first parameter:
+```javascript
+    gdescribe('group1', 'TestSuit description', function() {
+        it('TestCase description', function() {
+            ......
+        });
+    });
+```
 
-# Tests  
-Describe and show how to run the tests with code examples.  
+# Contributors
+Ruizhi Wang: crystalplan999@gmail.com  
+Felice Geracitano: felice.geracitano@gmail.com
 
-# Contributors  
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.  
-
-# License  
-A short snippet describing the license (MIT, Apache, etc.)
+# License
+MIT license, please see <code>LICENSE</code> file for details.
